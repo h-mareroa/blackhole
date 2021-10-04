@@ -1,0 +1,48 @@
+
+.bh-square-grid-container{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+.bh-square{
+  float: left;
+  height: 60px;
+  width: 60px;
+  animation: z-axis 3s infinite ease-in-out;
+  margin: 2em;
+  transform: perspective(30px);
+}
+
+.bh-square--blue{
+  background-color: blue;
+}
+
+.bh-square--navy{
+  background-color: navy;
+}
+
+.bh-square--delay5{
+  animation: z-axis 5s infinite ease-in-out;
+}
+
+.bh-square--delay7{
+  animation: z-axis 7s infinite ease-in-out;
+}
+
+.bh-square--darkblue{
+  background-color: darkblue;
+}
+
+.bh-square--40px{
+  height: 40px;
+  width: 40px;
+}
+
+/* @keyframes z-axis {
+  0%{
+    transform: perspective(30px) translateZ(-50em);
+  }
+
+100%{
+  transform: perspective(30px) translateZ(9em);
+}
+} */
