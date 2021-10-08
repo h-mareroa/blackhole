@@ -19,10 +19,9 @@ img {
   grid-auto-rows: minmax(20px, auto);
   justify-content: center;
   align-content: center;
-  transform-style: preserve-3d;
 }
 
-.bh-square-grid-container-centerleft {
+.bh-square-grid-container-center-left {
   float: left;
   height: 100vh;
   width: 20vw;
@@ -33,7 +32,7 @@ img {
   align-content: center;
 }
 
-.bh-square-container-right {
+.bh-square-container-center-right {
   float: left;
   height: 100vh;
   width: 20vw;
@@ -49,13 +48,18 @@ img {
   margin: 1em;
   transform: perspective(30px);
   color: transparent;
+  animation: move-right 3s infinite ease-in-out;
 }
 
 .bh-square--animation-left{
-  animation: move-left 3s infinte ease-in-out;
+  animation: move-left 3s infinite ease-in-out;
 }
 
-/* .bh-square--delay3{
+.bh-square--animation-right{
+  animation: move-right 3s infinite ease-in-out;
+}
+
+.bh-square--delay3{
   animation-fill-mode: both;
   animation-delay: 3s;
 }
@@ -80,13 +84,21 @@ img {
   animation-delay: 10s;
 }
 
-.bh-square--slow5{
-  animation: translate-left 5s infinite ease-in-out;
+.bh-square--left-slow5{
+  animation: move-left 5s infinite ease-in-out;
 }
 
-.bh-square--slow7{
-  animation: translate-left 7s infinite ease-in-out;
-} */
+.bh-square--left-slow7{
+  animation: move-left 7s infinite ease-in-out;
+}
+
+.bh-square--right-slow5{
+  animation: move-right 5s infinite ease-in-out;
+}
+
+.bh-square--right-slow7{
+  animation: move-right 7s infinite ease-in-out;
+}
 
 .bh-square--10px{
   height: 10px;
@@ -170,14 +182,13 @@ img {
   background-color: 130619;
 }
 
-@keyframes translate-right {
+@keyframes move-right {
   0%{
     transform: perspective(30px) translate3d(1em, 0em, -50em);
   }
 
 100%{
   transform: perspective(30px) translate3d(5em, 0em, 40em);
-
 }
 }
 @keyframes move-left {
@@ -187,6 +198,14 @@ img {
 
 100%{
   transform: perspective(30px) translate3d(-5em, 0em, 40em);
+}
+}
+@keyframes move-center {
+  0%{
+    transform: perspective(30px) translate3d(-1em, 0em, -50em);
+  }
 
+100%{
+  transform: perspective(30px) translate3d(-5em, 0em, 40em);
 }
 }
