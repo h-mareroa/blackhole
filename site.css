@@ -1,15 +1,102 @@
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.image-container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
 .bh-square-grid-container{
+  /* position: relative; */
+  height: 100vh;
+  width: 100vw;
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-auto-rows: minmax(20px, auto);
+  justify-content: center;
+  align-content: center;
+  /* grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%; */
+  /* grid-auto-rows: 200px; */
 }
 .bh-square{
-  float: left;
+  /* position: absolute; */
   height: 60px;
   width: 60px;
   animation: z-axis 3s infinite ease-in-out;
-  margin: 2em;
+  margin: 1em;
   transform: perspective(30px);
+  color: transparent;
+}
+
+.bh-square--delay3{
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.bh-square--delay5{
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+.bh-square--delay6{
+  animation-fill-mode: both;
+  animation-delay: 6s;
+}
+
+.bh-square--delay7{
+  animation-fill-mode: both;
+  animation-delay: 7s;
+}
+
+.bh-square--delay10{
+  animation-fill-mode: both;
+  animation-delay: 10s;
+}
+
+.bh-square--slow5{
+  animation: z-axis 5s infinite ease-in-out;
+}
+
+.bh-square--slow7{
+  animation: z-axis 7s infinite ease-in-out;
+}
+
+.bh-square--10px{
+  height: 10px;
+  width: 10px;
+}
+.bh-square--20px{
+  height: 20px;
+  width: 20px;
+}
+
+.bh-square--30px{
+  height: 30px;
+  width: 30px;
+}
+
+.bh-square--40px{
+  height: 40px;
+  width: 40px;
+}
+
+.bh-square--50px{
+  height: 50px;
+  width: 50px;
+}
+
+.bh-square--80px{
+  height: 80px;
+  width: 80px;
+}
+
+.bh-square--90px{
+  height: 90px;
+  width: 90px;
 }
 
 .bh-square--blue{
@@ -20,24 +107,47 @@
   background-color: navy;
 }
 
-.bh-square--delay5{
-  animation: z-axis 5s infinite ease-in-out;
-}
-
-.bh-square--delay7{
-  animation: z-axis 7s infinite ease-in-out;
+.bh-square--mediumblue{
+  background-color: mediumblue;
 }
 
 .bh-square--darkblue{
   background-color: darkblue;
 }
 
-.bh-square--40px{
-  height: 40px;
-  width: 40px;
+.bh-square--palatinateblue{
+  background-color: #120899;
 }
 
-/* @keyframes z-axis {
+.bh-square--bluebonnet{
+  background-color: #11067B;
+}
+
+.bh-square--persianblue{
+  background-color: #1c39bb;
+}
+
+.bh-square--lapislazuli{
+  background-color: #0D0942;
+}
+
+.bh-square--darkmidnightblue{
+  background-color: #000036;
+}
+
+.bh-square--colbalt{
+  background-color: #1208A6;
+}
+
+.bh-square--violet{
+  background-color: #1B0AFC;
+}
+
+.bh-square--purple{
+  background-color: 130619;
+}
+
+@keyframes z-axis {
   0%{
     transform: perspective(30px) translateZ(-50em);
   }
@@ -45,4 +155,4 @@
 100%{
   transform: perspective(30px) translateZ(9em);
 }
-} */
+}
