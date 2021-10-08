@@ -4,35 +4,58 @@ img {
   width: 100%;
 }
 
-.image-container{
+.image-container {
   position: fixed;
   height: 100%;
   width: 100%;
 }
 
-.bh-square-grid-container{
-  /* position: relative; */
+.bh-square-grid-container-center {
+  float: left;
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
   display: grid;
   grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
   grid-auto-rows: minmax(20px, auto);
   justify-content: center;
   align-content: center;
-  /* grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%; */
-  /* grid-auto-rows: 200px; */
+  transform-style: preserve-3d;
 }
-.bh-square{
-  /* position: absolute; */
+
+.bh-square-grid-container-centerleft {
+  float: left;
+  height: 100vh;
+  width: 20vw;
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-auto-rows: minmax(20px, auto);
+  justify-content: end;
+  align-content: center;
+}
+
+.bh-square-container-right {
+  float: left;
+  height: 100vh;
+  width: 20vw;
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-auto-rows: minmax(20px, auto);
+  justify-content: start;
+  align-content: center;
+}
+.bh-square {
   height: 60px;
   width: 60px;
-  animation: z-axis 3s infinite ease-in-out;
   margin: 1em;
   transform: perspective(30px);
   color: transparent;
 }
 
-.bh-square--delay3{
+.bh-square--animation-left{
+  animation: move-left 3s infinte ease-in-out;
+}
+
+/* .bh-square--delay3{
   animation-fill-mode: both;
   animation-delay: 3s;
 }
@@ -58,12 +81,12 @@ img {
 }
 
 .bh-square--slow5{
-  animation: z-axis 5s infinite ease-in-out;
+  animation: translate-left 5s infinite ease-in-out;
 }
 
 .bh-square--slow7{
-  animation: z-axis 7s infinite ease-in-out;
-}
+  animation: translate-left 7s infinite ease-in-out;
+} */
 
 .bh-square--10px{
   height: 10px;
@@ -147,12 +170,23 @@ img {
   background-color: 130619;
 }
 
-@keyframes z-axis {
+@keyframes translate-right {
   0%{
-    transform: perspective(30px) translateZ(-50em);
+    transform: perspective(30px) translate3d(1em, 0em, -50em);
   }
 
 100%{
-  transform: perspective(30px) translateZ(9em);
+  transform: perspective(30px) translate3d(5em, 0em, 40em);
+
+}
+}
+@keyframes move-left {
+  0%{
+    transform: perspective(30px) translate3d(-1em, 0em, -50em);
+  }
+
+100%{
+  transform: perspective(30px) translate3d(-5em, 0em, 40em);
+
 }
 }
