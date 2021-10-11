@@ -47,7 +47,7 @@ img {
   width: 60px;
   margin: 1em;
   transform: perspective(30px);
-  color: white;
+  color: transparent;
 }
 
 .bh-square--animation-left-down{
