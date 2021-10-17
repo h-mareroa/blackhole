@@ -1,0 +1,308 @@
+
+.click-container{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.image-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin-top: -1%;
+  margin-left: -1%;
+}
+
+.bh-square-grid-container-center {
+  float: left;
+  height: 100vh;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-auto-rows: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.bh-square-grid-container-center-left {
+  float: left;
+  height: 100vh;
+  width: 20vw;
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-auto-rows: 20px;
+  justify-content: end;
+  align-content: center;
+}
+
+.bh-square-container-center-right {
+  float: left;
+  height: 100vh;
+  width: 20vw;
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-auto-rows: 20px;
+  justify-content: start;
+  align-content: center;
+}
+.bh-square {
+  height: 60px;
+  width: 60px;
+  margin: 1em;
+  transform: perspective(30px);
+  color: transparent;
+}
+
+/* animation names and modifiers */
+
+.bh-square--animation-left-down{
+  animation: move-left-down 3s infinite ease-in;
+}
+.bh-square--animation-left-up{
+  animation: move-left-up 3s infinite ease-in;
+}
+
+.bh-square--animation-right-up{
+  animation: move-right-up 3s infinite ease-in-out;
+}
+
+.bh-square--animation-right-down{
+  animation: move-right-down 3s infinite ease-in-out;
+}
+
+.bh-square--left-down-4{
+  animation: move-left-down 4s infinite ease-in-out;
+}
+.bh-square--left-up-4{
+  animation: move-left-up 4s infinite ease-in-out;
+}
+
+.bh-square--right-up-4{
+  animation: move-right-up 4s infinite ease-in-out;
+}
+
+.bh-square--right-down-4{
+  animation: move-right-down 4s infinite ease-in-out;
+}
+
+.bh-square--left-up-5{
+  animation: move-left-up 5s infinite ease-in-out;
+}
+
+.bh-square--left-down-5{
+  animation: move-left-down 5s infinite ease-in-out;
+}
+
+.bh-square--right-up-5{
+  animation: move-right-up 5s infinite ease-in-out;
+}
+
+.bh-square--right-down-5{
+    animation: move-right-down 5s infinite ease-in-out;
+}
+
+.bh-square--left-up-6{
+  animation: move-left-up 6s infinite ease-in-out;
+}
+
+.bh-square--left-down-6{
+  animation: move-left-down 6s infinite ease-in-out;
+}
+
+.bh-square--right-up-6{
+  animation: move-right-up 6s infinite ease-in-out;
+}
+
+.bh-square--right-down-6{
+    animation: move-right-down 6s infinite ease-in-out;
+}
+
+.bh-square--left-up-7{
+  animation: move-left-up 7s infinite ease-in-out;
+}
+
+.bh-square--left-down-7{
+  animation: move-left-down 7s infinite ease-in-out;
+}
+
+.bh-square--right-up-7{
+  animation: move-right-up 7s infinite ease-in-out;
+}
+
+.bh-square--right-down-7{
+    animation: move-right-down 7s infinite ease-in-out;
+}
+
+.bh-square--left-up-8{
+  animation: move-left-up 8s infinite ease-in-out;
+}
+
+.bh-square--left-down-8{
+  animation: move-left-down 8s infinite ease-in-out;
+}
+
+.bh-square--right-up-8{
+  animation: move-right-up 8s infinite ease-in-out;
+}
+
+.bh-square--right-down-8{
+    animation: move-right-down 8s infinite ease-in-out;
+}
+
+/* square sizes */
+
+.bh-square--10px{
+  height: 10px;
+  width: 10px;
+}
+.bh-square--20px{
+  height: 20px;
+  width: 20px;
+}
+
+.bh-square--30px{
+  height: 30px;
+  width: 30px;
+}
+
+.bh-square--40px{
+  height: 40px;
+  width: 40px;
+}
+
+.bh-square--50px{
+  height: 50px;
+  width: 50px;
+}
+
+.bh-square--80px{
+  height: 80px;
+  width: 80px;
+}
+
+.bh-square--90px{
+  height: 90px;
+  width: 90px;
+}
+/* square colours */
+
+.bh-square--red {
+  background-color: red;
+}
+
+.bh-square--persimmon {
+  background-color:	#e30022;
+}
+
+.bh-square--poppy {
+  background-color: #e8000d;
+}
+
+.bh-square--crimson {
+  background-color: crimson;
+}
+
+.bh-square--venetianred {
+  background-color: #C80815;
+}
+
+.bh-square--garnet {
+  background-color: #8B0000;
+}
+
+.bh-square--burgundy {
+  background-color:	#800020;
+}
+
+.bh-square--maroon {
+  background-color: Maroon;
+}
+
+.bh-square--oxblood {
+  background-color: #4A0404;
+}
+
+.bh-square--rosewood {
+  background-color: #4e1609
+}
+
+.bh-square--licorice {
+  background-color:	#1B1212;
+}
+
+.bh-square--black {
+  background-color:	black;
+}
+/* animations */
+
+@keyframes move-right-up {
+  0%{
+    transform: perspective(30px) translate3d(1em, 0em, -50em);
+  }
+
+  100%{
+  transform: perspective(30px) translate3d(5em, -5em, 40em);
+  }
+}
+
+@keyframes move-right-down {
+  0%{
+    transform: perspective(30px) translate3d(1em, 0em, -50em);
+  }
+
+  100%{
+  transform: perspective(30px) translate3d(5em, 5em, 40em);
+  }
+}
+
+@keyframes move-left-up {
+  0%{
+    transform: perspective(30px) translate3d(-1em, 0em, -50em);
+  }
+
+  100%{
+  transform: perspective(30px) translate3d(-5em, -3em, 40em);
+  }
+}
+
+@keyframes move-left-down {
+  0%{
+    transform: perspective(30px) translate3d(-1em, 0em, -50em);
+  }
+
+  100%{
+  transform: perspective(30px) translate3d(-5em, 3em, 40em);
+  }
+}
+
+@keyframes move-center-up {
+  0%{
+    transform: perspective(30px) translate3d(-1em, 0em, -50em);
+  }
+
+  100%{
+  transform: perspective(30px) translate3d(-5em, 0em, 40em);
+  }
+}
+
+@keyframes move-center-down {
+  0%{
+    transform: perspective(30px) translate3d(-1em, 0em, -50em);
+  }
+
+  100%{
+  transform: perspective(30px) translate3d(-5em, 0em, 40em);
+  }
+}
+
+/* Mobile view */
+
+@media only screen and (max-width 400px) {
+  .bh-square-grid-container-center {
+    justify-content: start;
+  }
+}
