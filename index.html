@@ -165,18 +165,41 @@
       var countY = 0;
       var countZ = -50;
 
+      root.style.setProperty('--mouse-move-right-up-x', countX + "em");
+      root.style.setProperty('--mouse-move-right-up-y', countY + "em");
+      root.style.setProperty('--mouse-move-right-up-z', countZ + "em");
+
       /* 1 to 5 em (4 points forwards) */
       /* 0 to -5 em (5 point backwards)*/
       /* -50em to 40em (90 points)*/
 
+      let lastKnownScrollPosition = 0;
+      let ticking = false;
+
+      function doSomething(scrollPos) {
+
+        root.style.setProperty('--mouse-move-right-up-x', countX+scrollPos + "em");
+        root.style.setProperty('--mouse-move-right-up-y', countY+scrollPos + "em");
+        root.style.setProperty('--mouse-move-right-up-z', countZ+scrollPos + "em");
+      }
+
       document.addEventListener("scroll", e => {
-        console.log(e);
-        root.style.setProperty('--mouse-move-right-up-x', countX + "em");
-        root.style.setProperty('--mouse-move-right-up-y', countY + "em");
-        root.style.setProperty('--mouse-move-right-up-z', countZ + "em");
-        countX = countX + 10;
-        countY = countY - 10;
-        countZ = countZ + 100;
+
+
+        lastKnownScrollPosition = window.scrollY;
+
+                console.log(lastKnownScrollPosition);
+
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            doSomething(lastKnownScrollPosition);
+            ticking = false;
+          });
+
+          ticking = true;
+        }
+
+
       });
 
     })();
