@@ -157,14 +157,12 @@
   </body>
   <script>
     (function() {
-
       let root = document.documentElement;
       // let scrollContainer = document.getElementById("js-scroll-detect");
 
       var countX = 1;
       var countY = 0;
       var countZ = -50;
-
       root.style.setProperty('--mouse-move-right-up-x', countX + "em");
       root.style.setProperty('--mouse-move-right-up-y', countY + "em");
       root.style.setProperty('--mouse-move-right-up-z', countZ + "em");
@@ -178,17 +176,14 @@
 
       function doSomething(scrollPos) {
 
-        root.style.setProperty('--mouse-move-right-up-x', countX+scrollPos + "em");
-        root.style.setProperty('--mouse-move-right-up-y', countY+scrollPos + "em");
-        root.style.setProperty('--mouse-move-right-up-z', countZ+scrollPos + "em");
+        root.style.setProperty('--mouse-move-right-up-x', (countX+scrollPos) + "em");
+        root.style.setProperty('--mouse-move-right-up-y', (countY+scrollPos) + "em");
+        root.style.setProperty('--mouse-move-right-up-z', (countZ+scrollPos) + "em");
       }
 
       document.addEventListener("scroll", e => {
-
-
         lastKnownScrollPosition = window.scrollY;
-
-                console.log(lastKnownScrollPosition);
+        console.log(lastKnownScrollPosition);
 
         if (!ticking) {
           window.requestAnimationFrame(function() {
